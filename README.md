@@ -1,43 +1,54 @@
-# Stock Market Technical Analysis: Apple (AAPL)
+# Apple Stock Market Analysis
 
-A comprehensive technical analysis tool that provides deep insights into Apple (AAPL) stock performance through data-driven analysis and trading signals.
-
-## Overview
-
-This project analyzes Apple stock data from 2020 to present, combining basic analysis with advanced technical indicators to provide actionable trading insights.
-
-## Inspiration
-
-This project is inspired by Marco Peixeiro's "Time Series Forecasting in Python", particularly Chapter 3.
+This project analyzes Apple (AAPL) stock market data using Python. It fetches historical data from Yahoo Finance, performs basic analysis, and generates visualizations.
 
 ## Features
 
-### 1. Data Collection
-- Historical stock price and trading volume data retrieval using `yfinance`
-- Comprehensive coverage from 2020 to present
-- Daily price movements and trading activity tracking
+- Fetches real-time Apple stock data from Yahoo Finance
+- Calculates daily returns and moving averages
+- Generates visualizations:
+  - Stock price chart with 20-day and 50-day moving averages
+  - Distribution of daily returns
 
-### 2. Basic Analysis
-- Daily returns calculation
-- Trading volume change tracking
-- Time-series visualizations
-- Trend and pattern identification tools
+## Directory Structure
 
-### 3. Technical Indicators
-- Moving Averages (20-day and 50-day)
-- Volatility Analysis
-- Relative Strength Index (RSI)
+```
+.
+├── data/                   # Contains stock market data
+├── figures/                # Contains generated plots
+├── src/                    # Source code
+│   └── apple_stock_analysis.py
+└── requirements.txt        # Python dependencies
+```
 
-### 4. Trading Signals
-- Moving Average Crossovers
-- RSI-Based Signals
+## Setup
 
-### 5. Performance Metrics
-- Signal frequency analysis
-- Risk-adjusted returns (Sharpe Ratio)
+1. Create a virtual environment (optional but recommended):
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 
+Run the analysis script:
 ```bash
-python stock_analysis.py
+python src/apple_stock_analysis.py
 ```
+
+The script will:
+1. Fetch the last 2 years of Apple stock data
+2. Perform basic analysis
+3. Generate visualizations in the `figures` directory
+4. Save the data in the `data` directory
+
+## Generated Files
+
+- `data/apple_stock_data.csv`: Historical stock data with calculated metrics
+- `figures/apple_stock_price.png`: Stock price chart with moving averages
+- `figures/returns_distribution.png`: Distribution of daily returns
